@@ -1,0 +1,148 @@
+%Archivo para subfiles.
+%\documentclass{subfiles} 
+
+% Preambulo
+\include{pre/pre-1}
+
+
+\begin{document}
+
+
+\section{Definiciones importantes}
+A partir de ahora, $X$ será un espacio $T_2$ y  $Hom_0(X)$ denotará al subgrupo de los homeomorfismos $h:X \to X$ tales que existe $U$ abierto en $X$ tal que e 
+
+$$h|_U=Id_U.$$
+	 
+\begin{df}
+Sean $X$ espacio topológico. Denotamos a $2^X$ la colección de los subconjuntos cerrados y no vacíos de $X$.  Sea $\mathcal{K} \subset 2^X$ tal que;
+ \begin{enumerate}
+\item los elementos de $\mathcal{K}$ son no degenerados y homeomorfos unos con otros,
+\item para cada $U$ abierto de $X$ existe $K \in \mathcal{K}$ tal que $K \subset U,$
+\item para $K \in \mathcal{K}$, $Cl(K^c) \in \mathcal{K}.$
+\end{enumerate}
+
+diremos que $\mathcal{K}$ es una \textbf{estructura de rotación} para $X$.
+\end{df}
+
+\begin{cn}
+$Im_G(2^X)$ denotará la colección de todas las imágenes de elementos de $2^X$ bajo los elementos de $G \subset Hom(X).$
+\end{cn}
+
+
+\begin{ob}\label{ob:hom_sop_en_Ks}
+Sea $g \in G_0$ se sigue que existe un abierto $U$ en $X$ tal que $g|_U=id_U$, por la segunda condición de $\mathcal{K}$ estructura, existe un conjunto $K_1 \in \mathcal{K}$ tal que $K_1 \subset U$ y tamando complementos de esto último se tiene que 
+
+$$X \setminus U \subset X \setminus K_1$$
+
+al tomar la cerradaura de cada conjunto tenemos que,
+
+$$X \setminus U \subset \overline{ X \setminus K_1}$$
+
+puesto que $X \setminus U$ es cerrado. De esta manera se obtiene que 
+
+$$ \overline{ X \setminus K_1}  \subset Sup(g) $$
+
+por la tercera condición de $\mathcal{K}$ estructura se sigue que $\overline{ X \setminus K_1} \in \mathcal{K}$ y por tanto $g$ está soportando en un elemento $K = \overline{ X \setminus K_1}$.
+\end{ob}
+
+
+\begin{ob}\label{ob:K_sep_por_hom} \label{ob:K_separado_por_homeos}
+Dado un homeomorfismo $h$ no trivial existe $K \in \mathcal{K}$ tal que $h(K) \cap K = \emptyset.$ En efecto, como $h$ es no trivial se sigue que existe $x \in X$ tal que $h(x) \neq x.$ Por la continuidad de $h$ existe un abierto $U(x)$ tal que $h|_u \neq Id_U$, es decir un abierto donde $h$ no es la identidad. Como $X$ es $T_2$ sin pérdida de generalidad existe un abierto $V(h(p))$ tal que $U$ y $V$ cumplen que 
+
+$$U \cap V = \emptyset.$$
+
+Por la condición 2 de $K$ estructura tenemos que existe un $K \in \mathcal{K}$ tal que $K \subset U$ y resta ver que de la continuidad de $h$ se sigue que $h(K) \subset V$ y por tanto 
+
+$$K \cap h(K) = \emptyset.$$
+\end{ob}
+
+
+\begin{df}\label{df:Suc_rot}
+Sea $X$ un espacio con $\mathcal{K}$ estructura de rotación. Si existe una sucesión de conjuntos $(K_i)_{i\in \mathbb{Z}} \subset \mathcal{K}$ tal que,
+\begin{enumerate}
+\item $(K_i)_{i\in \mathbb{Z}}$ es una sucesión de conjuntos disjuntos. 
+\item Existe $U$ abierto en $X$ tal que $\bigcup_{i\in \mathbb{Z}} K_i \subset U$.
+\item $Cl(\bigcup \mathcal{K})- \bigcup \mathcal{K}=\{p \}$ con $p \in X$ y es tal que para cualquier vecindad $U(p)$ contiene todas excepto una cantidad finita de elementos de $\mathcal{K}.$
+
+\end{enumerate}
+Decimos que $X$ tiene una \textbf{sucesión de rotación} y a $(K_i)_{i\in \mathbb{Z}}$ le diremos una \textbf{sucesión de rotación} de $X$.
+
+\end{df}
+
+
+\begin{df}
+Sea $X$ espacio topológico con una $\mathcal{K}$ estructura y $G$ un subgrupo de $Hom(X)$. Decimos que $X$ tiene \textbf{rotación}-$(G,\mathcal{K})$ si para cualquier $K \in \mathcal{K}$ existe una sucesión de rotación $(K_i)_{i \in \mathbb{Z}}$ tal que $\bigcup K_i \subset K$ y existen $f_1$, $f_2 \in G_0$ con soporte en $K$ tales que; 
+
+\begin{enumerate}
+\item $f_1(K_i)=K_{i+1}$ para cada $i$.
+\item $f_2|_{K_0}=f_1|_{K_0}$, $f_2|_{K_{2i}}=(f_1^2)^{-1}|_{K_{2i}}$, para toda $i >0$ y $f_2|_{K_{2i-1}}=f_1^2|_{K_{2i-1}}$ para toda $i >0$.
+\item Si para cada $i$, $f_i \in Hom_0(X)$ tiene soporte en $K_i$, entonces existe $f \in Hom_0(X)$ con soporte en $\bigcup K_i$ tal que $f|_{K_i}=f_i|_{K_i}$  para cada $i$.
+		
+\item Para cualquier $K' \in \mathcal{K}$ existe $\varphi \in Hom(X)$ tal que $\varphi(K')=K.$
+
+\end{enumerate}
+\end{df}
+
+%
+%\begin{df}
+%Sea $X$ un espacio con rotación-$(G,\mathcal{K})$, decimos que $X$ es $(G,\mathcal{K})$-**homogéneo** si
+%	
+%	
+%- para cualquier $K \in \mathcal{K}$ y $h \in Hom(X)$ tal que $h(K)\cap K = \emptyset$ entonces existe $K' \in \mathcal{K}$ y $\psi \in G_0$, $\psi$ con soporte en $K'$ tal que $\psi|_K=h|_K$.
+%- Para cualesquiera $K_1$, $K_2$, $K_3$ y $K_4 \in Im_G(\mathcal{K})$ con $K_1 \cap K_2=K_3 \cap K_4 = \emptyset$, $K_1 \cup K_2 \neq X \neq K_3 \cup K_4$, existe $\varphi \in Hom(X)$ tal que $\varphi(K_1)=K_3$ y $\varphi(K_2) =K_4.$
+%
+%***
+%
+%
+%
+%
+
+
+
+
+%%%%%%%%%%%%   Conjunto de Cantor
+
+\section{Conjunto de Cantor}
+
+El conjunto de Cantor, llamado así por su descubridor Georg Ferdinand Ludwig Philipp Cantor es un ejemplo muy útil en análisis por mencionar algunas, en el conjunto de Cantor nos es posible definir dos funciones Lebesgue medibles cuya composición no es Lebesgue medible o definir un conjunto Lebesgue medible que no es Borel medible, además es un conjunto infinito no numerable de medida de Lebesgue cero, pero con una modificación que se conoce como el conjunto de Cantor-Smell-Volterra obtenemos un conjunto de medida positiva. También es de destacar de una propiedad universal del conjunto de Cantor, esto es, tiene propiedades topológicas las cuales permiten clasificar espacios con homeomorfismos al conjunto de Cantor. 
+
+\subsubsection{Construcción}
+Vamos a definir conjuntos de manera recursiva, para el primer paso  sean $I:=[0,1]$ y $J_1:=(1/3,2/3)$. Definimos los conjuntos
+
+\begin{enumerate}
+\item $F_{11} := [0,1/3]$ y $F_{12} := [2/3,1]$. Notemos que la longitud de estos intervalos es 1/3.
+\item $C_1 := I \setminus J_1$. 
+\end{enumerate} 
+
+En el primer paso, al intervalo unitario $I$ lo dividimos en tres y  le hemos quitado el intervalo de en medio identificado como $J_1$.
+Para el segundo paso, en los intervalos $F_{11}$ y $F_{12}$ quitaremos los intervalos $J_2(F_{11})=(1/3^2,2/3^2)$ y $J_2(F_{12})=(7/3^2,8/3^2)$. Definimos a los intervalos
+
+\begin{enumerate}
+\item $J_2$=$J_2(F_{11}) \cup J_2(F_{12})$,
+\item $F_{21}=[0,1/3^2]$,  $F_{22}=[2/3^2,3/3^2]$, $F_{23}=[6/3^2,7/3^2]$ y $F_{24}=[8/3^2,1]$, notemos que la longitud de estos intervalos es $1/3^2$.
+\item $C_2=I \setminus (J_1 \cup J_2)$. 
+\end{enumerate}
+
+En el segundo paso identificamos a los dos intervalos restantes del paso anterior, $F_{11}$ y $F_{12}$ luego, a cada uno de los intervalos se les repite el argumento del paso uno es decir, dividimos el intervalo en tres y retiramos el intervalo de en medio.
+
+A $F_{12}$ le quitamos el intervalo $J_2(F_{11})$ obteniendo ahora dos intervalos $F_{21}$ y $F_{22}$. Para el intervalo $F_{22}$ le hemos quitado el intervalo $J_2(F_{22})$ de este modo tenemos dos intervalos $F_{23}$ y $F_{24}$.
+
+
+La notación representa lo siguiente, $F_{ij}$ se define como el $j$-ésimo intervalo obtenido en el paso $i$. Repitiendo de manera infinita, obtenemos sucesiones de conjuntos $(J_n)_{n=1}^\infty$ y $(C_n)_{n=1}^\infty$. La familia de intervalos $J_n$ es la unión disjunta de $2^{n-1}$ intervalos abiertos y $C_n$ es una sucesión decreciente de intervalos cerrados, donde cada $C_n$ es unión disjunta de $2^n$ intervalos cerrados. La longitud de cada $J_n$ y $C_n$ es $1/3^n.$
+
+Consideremos finalmente a $J=\bigcup_{n }^{\infty}  J_n$ definimos al \textbf{conjunto Cantor ternario} como $$C=\bigcap_{n=1}^\infty C_n=I \setminus J.$$ 
+
+En lo siguiente veremos que el conjunto de Cantor es un espacio topológico con una propiedad de clasificación. 
+
+\subsection*{Topología del conjunto de Cantor}
+
+El intervalo $I$ es un conjunto compacto por el teorema de Hein-Borel. Cada conjunto $F_{ij}$ es un subintervalo cerrado y acotado de $I$ por tanto es compacto. Además cada $C_n$ es una unión finita de conjuntos compactos en consecuencia cada conjunto $C_n$ es un conjunto compacto para cada $n \in \mathbb{N}$. Por construcción se cumple que, dados $n < m $ índices, $C_m \subset C_n$. Tenemos por tanto que los $C_n$ forman una familia de conjuntos compactos, no vacíos y anidados. 
+
+\begin{lm}
+La intersección anidada de conjuntos compactos anidados es no vacía. 
+\end{lm} 
+
+El conjunto de Cantor también cumple ser totalmente disconexo, en otras palabras, para cada $x \in C$ $Q(x)=\{x\}$. 
+ 
+
+\end{document}
