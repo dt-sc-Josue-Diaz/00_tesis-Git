@@ -16,7 +16,7 @@
 
 \section*{Introducción}
 
-A lo largo de este texto utilizaremos las nociones de espacios topológicos y de grupos. Nuestra primera parte consta de introducir notación y teoremas correspondientes a espacios topológicos, conexidad y homemorfismos. De grupos, hablaremos de morfismos de grupos y grupos simples. Nuestra bibliografía es estándar, esto es, libros de cursos o libros que son reconocidos como base para algunos cursos. 
+A lo largo de este texto utilizaremos las nociones de espacios topológicos y de grupos. Nuestra primera parte consta de introducir notación y teoremas correspondientes a espacios topológicos, operadores topológicos y homemorfismos. De grupos, hablaremos de morfismos de grupos, grupos derivados y grupos simples. Nuestra bibliografía es estándar, esto es, libros de cursos o libros que son reconocidos como base para algunos cursos. 
 
 \section*{Espacios topológicos}
  Vamos a usar la notación estándar de conjuntos. La pertenencia de un elemento $x$ a un conjunto $X$ se denota por $x \in X$. Dados dos conjuntos $A$ y $B$ denotaremos la contención del conjunto $A$ en el conjunto $B$ por $A \subset B$ y la igualdad de conjuntos $A=B$ representa que se dan las contenciones $A \subset B$ y $B \subset A$.
@@ -27,17 +27,13 @@ La unión del conjunto $A$ con $B$ se representa por $A \cup B$, la intersecció
  f(A)=\{y \in Y : \text{ existe }x \in A \text{ de manera que } f(x)=y\}
  \end{align*}
 
-será llamado imagen directa de $A$ bajo $f$, análogamente dado $B \subset Y$ el conjunto 
+será llamado imagen directa de $A$ bajo $f$. Por otro lado  dado $B \subset Y$ el conjunto 
 
 \begin{align*}
 f^{-1}(B)=\{x \in X :\text{ tal que } f(x) \in B \}
 \end{align*}
 
 será llamado la imagen inversa del conjunto $B$ bajo $f$. 
-
-\begin{ej}
-Sea $f:\{1,2,3,4\} \to \{1,2,3,4\}$ dada por, $f(1)=f(3)=1$, $f(2)=f(4)=3$. Esta función no es inyectiva ni sobreyectiva. Consideremos a $\{1,4\}$, notemos que $f^{-1}(\{1,4\})=\{1,3\}$ pero $f(f^{-1}(\{1,4\}))=\{1\}$. Por otro lado, consideremos a $\{1,2\}$ y notemos que $f(\{1,2\})=\{1,3\}$  pero que $f^{-1}(\{1,3\})=\{1,2,3,4\}$.
-\end{ej}
 
 \begin{ob}
 En general tomar la imagen inversa de una imagen directa o en orden alterno, no se obtiene como resultado el mismo conjunto. Pero se tiene que
@@ -49,6 +45,10 @@ En general tomar la imagen inversa de una imagen directa o en orden alterno, no 
 
 La primera contención es igualdad si $f$ es sobreyectiva y la segunda contención es igualdad si $f$ es inyectiva, es claro que si $f$ es biyectiva tenemos las dos igualdades. 
 \end{ob}
+
+\begin{ej}
+Sea $f:\{1,2,3,4\} \to \{1,2,3,4\}$ dada por, $f(1)=f(3)=1$, $f(2)=f(4)=3$. Esta función no es inyectiva ni sobreyectiva. Consideremos a $\{1,4\}$, notemos que $f^{-1}(\{1,4\})=\{1,3\}$ pero $f(f^{-1}(\{1,4\}))=\{1\}$. Por otro lado, consideremos a $\{1,2\}$ y notemos que $f(\{1,2\})=\{1,3\}$  pero que $f^{-1}(\{1,3\})=\{1,2,3,4\}$.
+\end{ej}
 
 En la práctica es usual no indicarse el dominio e imagen de una función pues implícitamente se da a entender que el lector no tiene inconveniente.
 
@@ -72,7 +72,8 @@ La segunda condición se conoce como \textbf{cerradura bajo intersecciones finit
 Sean $X$ un conjunto y la familia $2^X$, el par formado por $(X, 2^X)$ es un espacio topológico y es llamado \textbf{espacio discreto}. Por otro lado sea $\tau=\{\emptyset, X\}$, esta familia cumple la definición de topología, el espacio $(X, \tau)$ es llamado \textbf{espacio indiscreto}.
 \end{ej}
 
-Además si $X$ contiene mas de un punto, las familias $2^X$ y $\tau$ del ejemplo anterior son distintas pero se da la contención  $\tau \subset 2^X$. En consecuencia un conjunto puede tener mas de una topología y distintas. 
+Además, si $X$ contiene mas de un punto, las familias $2^X$ y $\tau$ del ejemplo anterior son distintas pero se da la contención  $\tau \subset 2^X$ notemos que en consecuencia un conjunto puede tener mas de una topología y entre ellas distintas. 
+
 
 La topología guarda información importante del conjunto $X$ que nos puede ayudar a distinguir propiedades de este conjunto. En el ejemplo, los espacios discreto e indiscreto no distinguen mucho sobre $X$, estas dos topologías en este aspecto son triviales.
 
@@ -87,7 +88,7 @@ Sea $X$ un espacio topológico $Y \subset X$ entonces $\tau_Y =\{A \cap U: U \in
 \end{te}
 
 \begin{cn}
-El tema que no vamos a detallar es el de sistema des vecindades y bases. Para estos temas tenemos en la bibliografía \cite{top_prieto} capitulo 2, página 58 para bases de vecindades y capitulo 3, página 73 para bases para una topología.
+El tema que no vamos a detallar es el de sistema de vecindades y bases. Para estos temas tenemos en la bibliografía \cite{top_prieto} capitulo 2, página 58 para bases de vecindades y capitulo 3, página 73 para bases para una topología.
 \end{cn}
 
 \begin{ej}
