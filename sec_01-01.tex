@@ -74,7 +74,6 @@ Sean $X$ un conjunto y la familia $2^X$, el par formado por $(X, 2^X)$ es un esp
 
 Además, si $X$ contiene mas de un punto, las familias $2^X$ y $\tau$ del ejemplo anterior son distintas pero se da la contención  $\tau \subset 2^X$ notemos que en consecuencia un conjunto puede tener mas de una topología y entre ellas distintas. 
 
-
 La topología guarda información importante del conjunto $X$ que nos puede ayudar a distinguir propiedades de este conjunto. En el ejemplo, los espacios discreto e indiscreto no distinguen mucho sobre $X$, estas dos topologías en este aspecto son triviales.
 
 \begin{cn}
@@ -279,7 +278,7 @@ Si $x$, $y \in X_{d}$ con $ x\neq y $ entonces existen vecindades $U(x)$ y $V(y)
 El teorema anterior nos dice que los espacios métricos son espacios Hausdorff.
 \end{ob}
 
-Terminamos esta parte con la siguiente definición que es muy usada en los articulos de \cite{kras}, Wjyburn y Moore
+Terminamos esta parte con la siguiente definición que es muy usada en los artículos de \cite{kras}, \cite{why} y \cite{moore}.
 
 \begin{df}
 Decimos que $X$ es un \textbf{continuo} si es un espacio métrico, compacto y conexo.
@@ -290,9 +289,15 @@ Al estudiar espacios métricos nos vemos en la opción de no estudiar los axioma
 
 \section*{Topología conciente}
 
-En topología se estudia distintas maneras de obtener espacios topológicos una manera es el subespacio, otras mas complejas son las topologías generadas por funciones o familia de funciones, en sí es obtener un espacio topológico donde una función o una familia de funciones son continuas. Recomendamos acudir al texto Salicrup, donde se explica de manera adecuada esta técnica. 
+En topología se estudia distintas maneras de obtener espacios topológicos una manera es el subespacio, otras mas complejas son las topologías generadas por funciones o familia de funciones, en sí es obtener un espacio topológico donde una función o una familia de funciones son continuas. El texto \cite{top_salicrup}, se explica de manera adecuada este tema, desde el capitulo 3 hasta el 5. Sin embargo tomaremos las definiciones de \cite{top_prieto} para mayor facilidad. 
 
-Sea $X$ un espacio y $A \subset X$, consideremos a $Y=(X\setminus A) \cup \{A\}$, el subespacio $A$ ha sido colapsado a un punto $\{A\}$; sea
+\begin{df}
+Sean $X$ un espacio topológico, $Y$ un conjunto y $f:X \to Y$ una función sobreyectiva. La topología mas fina en $Y$ para la cual $f$ es continua se llama \textbf{topología de identificación} inducida por $f$. A $f$ se le llama \textbf{identificación}.
+\end{df}
+
+
+
+Dado $X$ un espacio y $A \subset X$, consideremos a $Y=(X\setminus A) \cup \{A\}$, el subespacio $A$ ha sido colapsado a un punto $\{A\}$; sea
 
 \begin{align*}
 q(x)= \begin{cases}
@@ -301,26 +306,55 @@ A \text{ si } x \in A.
 \end{cases}
 \end{align*}
 
-la topología final inducida por $q$ es llamada la \textbf{topología cociente}; el espacio resultante se llama \textbf{espacio cociente} y se denota por $X/A$, a $q$ se le llama \textbf{proyección o función cociente}.
+la topología final inducida por $q$ es llamada la \textbf{topología identificación}; el espacio resultante se llama \textbf{espacio de identificación} y a $q$ se le llama \textbf{identificación}. 
 
 \begin{ej}
-Consideremos a $\mathbb{Z}$ como subespacio de $\mathbb{R}$ y al cociente $\mathbb{R}/\mathbb{Z}$, este espacio cociente tiene un subespacio homeomorfo a $S^1$ por cada intervalo $[n,n+1]$ colapsando los números enteros a un punto. A este espacio se le conoce como \textbf{ariete hawaiano}
+Consideremos a $\mathbb{Z}$ como subespacio de $\mathbb{R}$ y al cociente $\mathbb{R}/\mathbb{Z}$, este espacio cociente tiene un subespacio homeomorfo a $S^1$ por cada intervalo $[n,n+1]$ colapsando los números enteros a un punto. A este espacio se le conoce como \textbf{ariete hawaiano}.
 \end{ej}
 
-Un ejemplo mas complejo es el siguiente. Recordemos que una relación de equivalencia induce una partición de un conjunto en subconjuntos ajenos que son las clases de equivalencia, las cuales se definen por $[x]=\{y \in X : x \sim y\}$. La familia de las clases de equivalencia es denotado por $X/ \sim$ ie, $$X/ \sim=\{[x]: x \in X\}.$$  
+Los resultados sobre la topología de identificación se pueden consultar en \cite{top_prieto} página 87. Nos iremos ahora al tema es espacio cociente. Veamos ahora los espacios cocientes.
+
+Sean $X$ espacio topológico y $\sim$ una relación de equivalencia en $X$. Recordemos que una relación de equivalencia induce una partición de un conjunto en subconjuntos ajenos que son las clases de equivalencia, las cuales se definen por $[x]=\{y \in X : x \sim y\}$. La familia de las clases de equivalencia es denotado por $X/ \sim$ ie, $$X/ \sim=\{[x]: x \in X\},$$  
+
+tenemos una función sobreyectiva,
+
+\begin{align*}
+f:X \to X / \sim
+\end{align*}
+
+dada por
+
+\begin{align*}
+f(x)=[x].
+\end{align*}
+
+\begin{df}
+Con la topología de identificación inducida por $f$ $X/ \sim$ se llama espacio cociente de $X$ bajo la relación $\sim$. 
+\end{df}
+
+\begin{ej}
+Sea $f: \mathbb{R} \to S^1$ la función exponencial, $f(s)=e^{2\pi i s}$ es una identificación talque $f(s)=f(t)$ si y solo si $t-s \in \mathbb{Z}$.
+\end{ej}
+
+El siguiente teorema se encuentra en \cite{top_prieto} como teorema IV.2.16.
+
+\begin{te} 
+Sea $f:X \to Y$ una identificación. Si se define una relación tal que $x \sim y$ si y solo si $f(x)=f(y),$ entonces $f$ determina un homeomorfismo $\tilde{f}:X/ \sim \to Y.$
+\end{te}
+
 
 \begin{ej}\label{ej:Cir_un_coc}
 Nuevamente, consideremos a $\mathbb{Z}$ como subespacio de $\mathbb{R}$ y la relación; $x \sim y$ si $x-y \in \mathbb{Z}$. Esta relación es de equivalencia. En efecto, 
 
-	\begin{enumerate}
-	\item $x-x=0 $ para todo $x \in \mathbb{R}$,
-	\item Supongamos que $x-y=z$ y $z \in \mathbb{Z}$ claramente $-z \in \mathbb{Z}$ y por tanto $y \sim x$
+\begin{enumerate}
+	\item $x-x=0 $ para todo $x \in \mathbb{R}$.
+	\item Supongamos que $x-y \in \mathbb{Z}$, entonces claramente $y-x=-(x-y) \in \mathbb{Z}$ y por tanto $y \sim x$.
 	\item Si $x-y \in \mathbb{Z}$ y $y-z \in \mathbb{Z}$ resta notar que $$x-z=x-y+y-z$$
-el cual es un numero entero. Por tanto $x \sim z$.  
+el cual es un numero entero. Por tanto $x \sim z$.
 	\end{enumerate}
 
-La función  $\pi: \mathbb{R} \to \mathbb{R}/ \sim$ dada por
-$\pi (x)=[x]$ está bien definida y es una función cociente. Definimos a $Hom(\mathbb{R})$ los homeomorfismos monótonos crecientes de la recta que cumplen la propiedad, 
+
+Del teorema anterior y de la función exponencial se tiene que $(\mathbb{R}/\sim) \cong S^1.$ La función  $\pi: \mathbb{R} \to \mathbb{R}/ \sim$ dada por $\pi (x)=[x]$ está bien definida y es una función cociente. Definimos a $Hom(\mathbb{R})$ los homeomorfismos monótonos crecientes de la recta que cumplen la propiedad, 
 
 $$\tilde{f}(x+1)= \tilde{f}(x)+1.$$
 
@@ -331,17 +365,14 @@ dado por
  
 $$f=\pi(\tilde{f}).$$
 
- Esta composición está bien definida. Dada $y \in [x]$ tenemos que existe $r \in \mathbb{Z}$ tal que $y=x+r$, luego consideremos que 
- $$f([y])=\pi(\tilde{f}(y))=\pi(\tilde{f}(x+r))=\pi(\tilde{f}(x)+r)=[\tilde{f}(x)+r]=[\tilde{f}(x)]=\pi(\tilde{f}(x))$$
+% Esta composición está bien definida. Dada $y \in [x]$ tenemos que existe $r \in \mathbb{Z}$ tal que $y=x+r$, luego consideremos que 
+% $$f([y])=\pi(\tilde{f}(y))=\pi(\tilde{f}(x+r))=\pi(\tilde{f}(x)+r)=[\tilde{f}(x)+r]=[\tilde{f}(x)]=\pi(\tilde{f}(x))$$
 
-
-El espacio cociente $\mathbb{R}/ \sim$, es  homeomorfo a $S^1$. Notemos que de esto se induce un homeomorfismo de la circunferencia en la circunferencia $f:Hom_1(S^1) \to Hom(S^1)$.
+ Notemos que de esto se induce un homeomorfismo de la circunferencia en la circunferencia $f:S^1 \to S^1$.
 \end{ej}
 
-
-Epstein en su trabajo de ***, del cual nos hemos basado en parte, trabajó en variedades (espacios muy parecidos a un espacio $\mathbb{R}^m$) sugerimos para ese tema las definiciones de ***. En una sección utilizaremos el trabajo de Epstein para ver la simplicidad del grupo de homeomorfismos del círculo.
-
-
-
+Concluimos esta sección con toda la notación referente a topología que vamos a usar o se usan en los artículos consultados. 
+\bibliography{biblio.bib}
+\bibliographystyle{plain}
 %%%%% Fin del documento
 \end{document} 

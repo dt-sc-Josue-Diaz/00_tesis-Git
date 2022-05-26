@@ -1,5 +1,3 @@
-% Libros
-
 @Book{grove,
   title     = {Algebra},
   publisher = {Dover Publications, INC},
@@ -7,14 +5,73 @@
   author    = {Grove,Larry C.},
 }
 
-@Article{,
-  author  = {Epstein D. B. A.},
-  journal = {Compo},
-  title   = {The simplicity of certain groups of homeomorphims},
+@Book{top_prieto,
+  title     = {Topología básica},
+  publisher = {segunda edicion,
+Ediciones Científicas Universitarias, México, DF.},
+  year      = {2013},
+  author    = {Prieto de Castro, Carlos},
 }
 
-@Comment{jabref-meta: databaseType:bibtex;}
+@Book{top_salicrup,
+  title     = {Introducción a la Topología},
+  publisher = {Sociedad Matemática Mexicana, México, DF.},
+  year      = {1997},
+  author    = {Salicrup Graciela},
+}
 
 % Articulos
+
+
+@article{ander,
+  title={The algebraic simplicity of certain groups of homeomorphisms},
+  author={Anderson, Richard D},
+  journal={American Journal of Mathematics},
+  volume={80},
+  number={4},
+  pages={955--963},
+  year={1958},
+  publisher={JSTOR}
+}
+
+
+@book{why,
+  title={Topological characterization of the Sierpinski curve},
+  author={Whyburn, Gordon Thomas},
+  year={1957},
+  publisher={United States Air Force, Office of Scientific Research}
+}
+
+
+@article{epst,
+  title={The simplicity of certain groups of homeomorphisms},
+  author={Epstein, David BA},
+  journal={Compositio Mathematica},
+  volume={22},
+  number={2},
+  pages={165--173},
+  year={1970}
+}
+
+@article{kras,
+  title={On homeomorphism of the Sierpi{\'n}ski curve},
+  author={Krasinkiewicz, J},
+  journal={Commentationes Mathematicae},
+  volume={12},
+  number={2},
+  year={1969},
+  publisher={Polish Mathematical Society}
+}
+
+@article{moore,
+  title={Concerning upper semi-continuous collections of continua},
+  author={Moore, Robert L},
+  journal={Transactions of the American Mathematical Society},
+  volume={27},
+  number={4},
+  pages={416--428},
+  year={1925},
+  publisher={JSTOR}
+}
 
 % Tesis
