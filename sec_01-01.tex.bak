@@ -15,6 +15,7 @@
 \chapter*{Teoría y definiciones}
 
 \section*{Introducción}
+
 A lo largo de este texto utilizaremos las nociones de espacios topológicos y de grupos. Nuestra primera parte consta de introducir notación y teoremas correspondientes a espacios topológicos, conexidad y homemorfismos. De grupos, hablaremos de morfismos de grupos y grupos simples. Nuestra bibliografía es estándar, esto es, libros de cursos o libros que son reconocidos como base para algunos cursos. 
 
 \section*{Espacios topológicos}
@@ -49,7 +50,7 @@ En general tomar la imagen inversa de una imagen directa o en orden alterno, no 
 La primera contención es igualdad si $f$ es sobreyectiva y la segunda contención es igualdad si $f$ es inyectiva, es claro que si $f$ es biyectiva tenemos las dos igualdades. 
 \end{ob}
 
-En la práctica es usual no indicarse el dominio e imagen de una función pues implícitamente se da a entender que el lector no tiene inconveniente o que es  claro del contexto. 
+En la práctica es usual no indicarse el dominio e imagen de una función pues implícitamente se da a entender que el lector no tiene inconveniente.
 
 \begin{df}
 Sea $X$ un conjunto y $\tau \subset 2^X$ una familia de subconjuntos de $X$. Decimos que $\tau$ es una \textbf{topología} para $X$ si cumple que;
@@ -68,7 +69,7 @@ La segunda condición se conoce como \textbf{cerradura bajo intersecciones finit
 \end{nt}
 
 \begin{ej}
-Sea $X$ un conjunto y consideremos la familia $2^X$, el espacio topológico formado por $(X, 2^X)$ es llamado \textbf{espacio discreto}. Por otro lado sea $\tau=\{\emptyset, X\}$, esta familia cumple la definición de topología, el espacio $(X, \tau)$ es llamado \textbf{espacio indiscreto}.
+Sean $X$ un conjunto y la familia $2^X$, el par formado por $(X, 2^X)$ es un espacio topológico y es llamado \textbf{espacio discreto}. Por otro lado sea $\tau=\{\emptyset, X\}$, esta familia cumple la definición de topología, el espacio $(X, \tau)$ es llamado \textbf{espacio indiscreto}.
 \end{ej}
 
 Además si $X$ contiene mas de un punto, las familias $2^X$ y $\tau$ del ejemplo anterior son distintas pero se da la contención  $\tau \subset 2^X$. En consecuencia un conjunto puede tener mas de una topología y distintas. 
