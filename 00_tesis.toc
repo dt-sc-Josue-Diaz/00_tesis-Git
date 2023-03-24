@@ -1,0 +1,16 @@
+\babel@toc {spanish}{}
+\contentsline {chapter}{Teoría y definiciones}{1}{chapter*.1}%
+\contentsline {section}{Espacios topológicos}{2}{section*.3}%
+\contentsline {section}{Topología métrica}{8}{chapter.20}%
+\contentsline {section}{Topología cociente}{10}{chapter.29}%
+\contentsline {section}{Grupos}{12}{Item.16}%
+\contentsline {section}{Grupos conmutadores, grupos derivados}{18}{chapter.51}%
+\contentsline {section}{Grupos topológicos}{21}{chapter.54}%
+\contentsline {section}{Topología compacto-abierta}{24}{Item.44}%
+\contentsline {section}{Homogeneidad de espacios topológicos}{25}{chapter.66}%
+\contentsline {chapter}{Simplicidad del grupo $\mathrm {Homeo}(S^1)$}{29}{Item.54}%
+\contentsline {section}{El grupo topológico $\mathrm {Homeo}(S^1)$}{30}{chapter.72}%
+\contentsline {section}{Simplicidad del grupo $\mathrm {Homeo}(S^1)$}{33}{chapter.73}%
+\contentsline {chapter}{La simplicidad de grupos de homeomorfismos}{37}{chapter.82}%
+\contentsline {section}{Conjunto de Cantor}{38}{chapter*.19}%
+\contentsline {section}{La simplicidad del grupo de Homeomorfismos del conjunto de Cantor}{40}{chapter.85}%
